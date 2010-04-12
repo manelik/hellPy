@@ -1,0 +1,39 @@
+
+README
+
+THE PROOF THAT PYTHON IS EVIL
+
+Everyone that uses python quickly arrives to the conclusion that it is 
+evil. This time I've got a proof.
+
+Anyone doing numerics should have learn first how to solve the advection 
+equation,
+
+u_t + v* u_x=0
+
+wich is like the square root of the wave equation in the sense that it 
+propagates the initial profile only in one dirrection.
+
+When doing finite differences, one finds that the "forward-euler" method
+is unstable, developing exponential growth on high frequency modes.
+
+Files included:
+
+feuler.f90
+Solver for a gaussian profile
+
+advec.py
+the same code rewritten in python
+
+
+the output is easily displayed in ygraph or xgraph
+
+
+Analysis:
+
+feuler.f90 blows as predicted, but python code may run undefinitly, the 
+propagation speed doesn't match, and eventualy when the pulse reaches the 
+boundary it gets reflected and propagates in the forbidden direction.
+
+This is enough to proof the evilness of python
+ 
